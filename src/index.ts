@@ -39,12 +39,12 @@ export function search(options: SearchOptions) {
     if (typeof rawValue === 'number') {
       value = {
         elevation: Math.max(0, rawValue),
-        isLegal: rawValue !== -1,
+        isLegal: rawValue > -1,
       };
     } else {
       value = {
         ...rawValue,
-        isLegal: rawValue.isLegal ?? rawValue.elevation !== -1,
+        isLegal: rawValue.isLegal ?? rawValue.elevation > -1,
       };
     }
 
@@ -59,7 +59,7 @@ export function search(options: SearchOptions) {
       // Make sure this tile is walkable.
       !isIllegal(cell, origin) &&
       // Don't use closed cells.
-      closed.indexOf(vectorId(cell)) === -1 &&
+      closed.indexOf(vectorId(cell)) < 0 &&
       // Check the neighboring cells, if diagonal movement.
       (
         // There are no neighbors to check.
