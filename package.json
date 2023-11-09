@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "@evilkiwi/astar",
+  "name": "@kaetram/astar",
   "version": "3.2.2",
-  "description": "Synchronous A* pathfinding for TypeScript",
+  "description": "Synchronous A* pathfinding for TypeScript. Builds on top of @evilkiwi/astar",
   "files": [
     "build"
   ],
@@ -15,13 +15,13 @@
     "url": "https://evil.kiwi",
     "email": "support@evil.kiwi"
   },
-  "homepage": "https://github.com/evilkiwi/astar",
+  "homepage": "https://github.com/Kaetram/astar",
   "bugs": {
-    "url": "https://github.com/evilkiwi/astar/issues"
+    "url": "https://github.com/Kaetram/astar/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evilkiwi/astar.git"
+    "url": "git+https://github.com/Kaetram/astar.git"
   },
   "keywords": [
     "a",
