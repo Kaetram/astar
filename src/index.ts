@@ -158,9 +158,14 @@ export function search(options: SearchOptions) {
     f: 0,
   }, null]);
 
+  let traversals = 0;
+
   // Traverse the open list until it is empty.
   while (open.length > 0) {
     const bestScore = open.shift();
+
+    // Stop traversing if we've done too many iterations.
+    if (traversals++ > 65) break;
 
     if (bestScore) {
       const [ vector ] = bestScore;
