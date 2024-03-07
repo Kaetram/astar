@@ -6,6 +6,7 @@ export function search(options: SearchOptions) {
   const cutCorners = options.cutCorners ?? true;
   const stepHeight = options.stepHeight ?? 1;
   const diagonal = options.diagonal ?? false;
+  const maxTraversals = options.traversals ?? 100;
 
   // Store the found path and open/closed lists.
   const closed: string[] = [ vectorId(options.from) ];
@@ -165,7 +166,7 @@ export function search(options: SearchOptions) {
     const bestScore = open.shift();
 
     // Stop traversing if we've done too many iterations.
-    if (traversals++ > 65) break;
+    if (traversals++ > maxTraversals) break;
 
     if (bestScore) {
       const [ vector ] = bestScore;

@@ -39,6 +39,7 @@ export interface SearchOptions {
    * that can be stepped up/down. Defaults to `1`.
    */
   stepHeight?: number;
+  traversals?: number; // Max amount of tiles to traverse
 }
 
 /**
