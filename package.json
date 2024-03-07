@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@kaetram/astar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Synchronous A* pathfinding for TypeScript. Builds on top of @evilkiwi/astar",
   "files": [
     "build"
